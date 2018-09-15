@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    meta(charset='UTF=8')
+    title Arvins App
+    link(rel='stylesheet', href='../app.css', type='text/css')
+  body
+    .header
+      .imhold
+        img#poster.logiIm(alt='lo', src='/fox.png')
+      .navhold
+        .topnav
+          a(href='/') Home
+          a(href='/landmarks') Landmarks
+          a(href='/contactus') Contact Us
+          a(href='/contact') Feedback
+          a(href='/createlandmark') Create Landmark
+          a(href='/upload') Upload
+      block content
+    .footer
+      p
+        | Liam Made this Node JS Application with Arvin 2018
+      form(method="post" action="search")
+        input(name="search", type="text", Placeholder="Search for....") 
+        button.button(type="submit") Search

@@ -1,0 +1,15 @@
+extends layout
+block content
+    .row
+      .grid-container 
+     
+        each row in res1
+         .item 
+           h1.itemtitle #{row.Name}
+           img.pimage(src='../#{row.Image}', alt='#{row.Name}')
+           p.itemp Entry Cost: €#{row.Price}
+           p.itemp Country: #{row.Country}
+           p.itemp Id: #{row.Id}
+           a.button(href="/editsql/#{row.Id}") Edit #{row.Id}
+           a.button(href="/editsql/#{row.Id}") Show #{row.Id}
+           a.button(href="/landmarks/#{row.Id}") Delete #{row.Id}

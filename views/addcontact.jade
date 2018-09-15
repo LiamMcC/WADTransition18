@@ -1,0 +1,15 @@
+extends layout
+block content
+    .row
+      h1 Welcome to the contact page
+       .grid-container 
+        .item
+          form(method="post")
+           fieldset
+            label(for="name") Your Name:
+            input(name="name", type="text", placeholder="Enter your name")
+            label(for="email") Your Email:
+            input(name="email", type="text", placeholder="Enter your email address")
+            label(for="Comment") Your Comment:
+            input(name="Comment", type="text", placeholder="Enter your comment")
+            button.button(type="submit") Contact Us

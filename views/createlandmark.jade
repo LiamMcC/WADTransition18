@@ -1,0 +1,21 @@
+extends layout
+block content
+    .row
+      h1 Create Landmark Page
+       .grid-container 
+        .item
+          form(ref='uploadForm', method='post', enctype='multipart/form-data')
+           fieldset
+            label(for="name") Landmark Name:
+            input(name="name", type="text", placeholder="Enter landmark name")
+            label(for="location") Your Location:
+            input(name="location", type="text", placeholder="Enter landmark location")
+            input.button(type='file', name='sampleFile')
+            br
+            label(for="price") Entry Price:
+            input(name="price", type="text", placeholder="Enter Entry Price")
+            button.button(type="submit") Create Landmark
+        
+   
+      
+      

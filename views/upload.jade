@@ -1,0 +1,5 @@
+extends layout
+block content
+    form#uploadForm(ref='uploadForm', method='post', enctype='multipart/form-data')
+      input.button(type='file', name='sampleFile')
+      input.button(type='submit', value='Upload!')

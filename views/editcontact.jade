@@ -1,0 +1,17 @@
+extends layout
+block content
+    .row
+      h1 Welcome to the contact page
+       .grid-container 
+        .item
+        each contacts in indOne
+          form(method="post")
+           fieldset
+            label(for="name") Your Name:
+            input(name="name", type="text", value="#{contacts.name}")
+            label(for="email") Your Email:
+            input(name="email", type="text", value="#{contacts.email}")
+            label(for="Comment") Your Comment:
+            input(name="Comment", type="text", value="#{contacts.Comment}")
+            button.button(type="submit") Edit Data
+        

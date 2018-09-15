@@ -1,0 +1,63 @@
+const db = mysql.createConnection({
+ 
+ host: 'hostingmysql304.webapps.net',
+ user: 'liamme',
+ password: 'L1Am39??',
+ database: 'liam'
+ 
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+app.get('/deletecomment/:id', function(req, res){
+ var json = JSON.stringify(contact);
+ 
+ var keytoFind = parseInt(req.params.id); // Id passed through the url
+ 
+ var data = contact;
+ var index = data.map(function(d) { return d.id; }).indexOf(keytoFind)
+ //var index = data.map(function(findId){findId.id;}).indexOf(keyToFind)
+ console.log(index)
+  console.log(keytoFind)
+ contact.splice(index, 1);
+ 
+ json = JSON.stringify(contact, null, 4);
+ fs.writeFile('./models/contact.json', json, 'utf8'); // Write the file back
+ res.redirect("/contact");
+ 
+});
+
+
+
+a.button(href="/deletereview/#{contacts.id}") Delete #{contacts.id}
+
+
+
+
+  // The following function reads the json file then pushes the data from the variable above to the reviews JSON file. 
+	fs.readFile('./models/contact.json', 'utf8', function readFileCallback(err, data){
+							if (err){
+		throw(err);
+	 }else {
+		contact.push(contactsx); // add the information from the above variable
+		json = JSON.stringify(contact, null , 4); // converted back to JSON the 4 spaces the json file out so when we look at it it is easily read. So it indents it. 
+		fs.writeFile('./models/contact.json', json, 'utf8'); // Write the file back
+		
+	}});
+	res.redirect("/contact")

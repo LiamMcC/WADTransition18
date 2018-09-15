@@ -1,0 +1,18 @@
+extends layout
+block content
+    .row
+      h1 Edit Landmark Page
+       .grid-container 
+        .item
+         each row in res1
+          form(method="post")
+           fieldset
+            label(for="name") Landmark Name:
+            input(name="name", type="text", value="#{row.Name}")
+            label(for="location") Your Location:
+            input(name="location", type="text", value="#{row.Country}")
+            label(for="image") landmark Image:
+            input(name="image", type="text", value="#{row.Image}")
+            label(for="price") Entry Price:
+            input(name="price", type="text", value="#{row.Price}")
+            button.button(type="submit") Edit Landmark
